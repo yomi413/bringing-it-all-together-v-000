@@ -43,7 +43,7 @@ class Dog
 
       @id = DB[:conn].execute("SELECT id FROM dogs")[0][0]
     end
-    # self
+    self
     # binding.pry
   end
 
