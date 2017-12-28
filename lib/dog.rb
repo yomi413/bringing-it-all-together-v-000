@@ -76,7 +76,7 @@ class Dog
       dog = self.create(name: name, breed: breed)
     end
     # binding.pry
-    dog
+    dog.size
   end
 
   def self.new_from_db(row)
