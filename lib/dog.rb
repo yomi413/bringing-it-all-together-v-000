@@ -43,8 +43,8 @@ class Dog
 
       @id = DB[:conn].execute("SELECT id FROM dogs")[0][0]
     end
-    self
-    binding.pry
+    # self
+    # binding.pry
   end
 
   def self.create(name:, breed:)
