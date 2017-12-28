@@ -44,6 +44,7 @@ class Dog
       @id = DB[:conn].execute("SELECT id FROM dogs")[0][0]
     end
     self
+    binding.pry
   end
 
   def self.create(name:, breed:)
@@ -101,7 +102,6 @@ class Dog
       WHERE id = ?
     SQL
 
-    # sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
 
